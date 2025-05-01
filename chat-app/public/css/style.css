@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #2c3e50, #4ca1af); /* Cool modern gradient */
+  color: #ffffff;
+}
+
+.join-screen, .chat-screen {
+  max-width: 700px;
+  margin: 50px auto;
+  background: #263849;  /* Refreshed dark card */
+  color: #f1f5f9;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.hidden {
+  display: none;
+}
+
+input, button {
+  padding: 12px;
+  margin: 10px 0;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input {
+  background: #34495e;
+  color: #f8fafc;
+}
+
+input::placeholder {
+  color: #cbd5e1;
+}
+
+button {
+  background: linear-gradient(90deg, #7fd1e3, #0083b0); /* Teal gradient */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #0083b0, #00b4db);
+  transform: scale(1.02);
+}
+
+/* 🔴 Highlight leave button with a more distinct gradient */
+button.leave-btn {
+  background: linear-gradient(90deg, #c83759, #ff4b2b); /* Bold red-orange gradient */
+}
+
+button.leave-btn:hover {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c); /* Reverse gradient on hover for emphasis */
+}
+
+
+.avatar-selection {
+  margin: 10px 0;
+}
+
+.avatars {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s, border 0.2s;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+}
+
+.avatar.selected {
+  border-color: #00e5ff;
+}
+
+.chat-box {
+  border-top: 1px solid #475569;
+  padding-top: 10px;
+}
+
+#chat-messages {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  background: #1a2733;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+header {
+  background: linear-gradient(90deg, #00b4db, #0083b0); /* Matching Teal gradient */
+  color: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+
+.message {
+  background-color: #3b5998;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 12px;
+  color: #e0f2fe;
+  max-width: 60%;
+}
+
+.message.user {
+  background-color: #1abc9c;
+  margin-left: auto;
+  color: #f0fdf4;
+}
+
+.msg-avatar {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.chat-sidebar {
+  margin-top: 20px;
+}
+
+#emoji-btn {
+  width: 24px;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-left: 5px;
+  filter: drop-shadow(0 0 3px #00e5ff);
+}
+
+@media (max-width: 600px) {
+  .chat-screen {
+    padding: 20px;
+  }
+
+  .chat-sidebar,
+  .chat-box {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChatApp</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div id="join-container" class="join-screen">
+    <h1>💬 Welcome to ChatApp</h1>
+    <form id="join-form">
+      <input type="text" id="username" placeholder="Enter your name" required />
+      <input type="text" id="room" placeholder="Enter room name" required />
+      <div id="alert-msg" class="alert-box" style="display: none; color: red; margin-bottom: 10px;"></div>
+
+      <div class="avatar-selection">
+        <p>Select an avatar:</p>
+        <div class="avatars">
+          <img src="/assets/avatars/avatar1.png" class="avatar" data-avatar="avatar1.png" />
+          <img src="/assets/avatars/avatar2.png" class="avatar" data-avatar="avatar2.png" />
+          <img src="/assets/avatars/avatar3.png" class="avatar" data-avatar="avatar3.png" />
+          <img src="/assets/avatars/avatar4.png" class="avatar" data-avatar="avatar4.png" />
+          <img src="/assets/avatars/avatar5.png" class="avatar" data-avatar="avatar5.png" />
+        </div>
+      </div>
+      <button type="submit">Join Chat</button>
+    </form>
+  </div>
+
+  <div id="chat-container" class="chat-screen hidden">
+    <header>
+      <h2 id="room-name">Room no.</h2>
+      <button id="leave-btn">Leave</button>
+    </header>
+    <div class="chat-sidebar">
+      <h3>Users</h3>
+      <ul id="users"></ul>
+    </div>
+    <div class="chat-box">
+      <div id="chat-messages"></div>
+      <form id="chat-form" action="#" method="POST">
+        <input id="msg" type="text" placeholder="Type a message..." required />
+        <img src="./assets/images.png" id="emoji-btn" />
+        <button>Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/emoji-picker.js"></script>
+  <script src="/js/main.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+</body>
+</html>
+
